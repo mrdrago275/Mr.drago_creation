@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MR. DRAGO — Discover Stunning AI Wallpapers</title>
+  <meta name="description" content="MR. DRAGO — Premium AI wallpapers: anime, fantasy, cyberpunk, dragons & original AI art. Download 4K wallpapers for desktop & mobile.">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"MR. DRAGO",
+    "url":"https://yourgithubusername.github.io/your-repo/",
+    "description":"Premium AI wallpapers — anime, fantasy, cyberpunk, dragons & original AI art."
+  }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <div id="app">
+    <!-- Particle Canvas Background -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <header class="nav" role="banner">
+      <div class="nav-inner">
+        <a href="#" class="logo" aria-label="MR. DRAGO home">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" stroke="#C0C0C0" stroke-width="0.8"/><path d="M6 15c3-6 9-6 12-9" stroke="#E60023" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <span class="brand">MR. DRAGO</span>
+        </a>
+
+        <nav class="main-nav" role="navigation" aria-label="Main">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#wallpapers">Wallpapers</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#trending">Trending</a></li>
+            <li><a href="#latest">Latest</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="search-btn" class="icon-btn" aria-label="Search" title="Search">🔍</button>
+          <button id="theme-toggle" class="icon-btn" aria-pressed="true" title="Toggle dark mode">🌙</button>
+          <a class="icon-btn" href="#" aria-label="Pinterest" title="Pinterest">📌</a>
+          <a class="icon-btn" href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">🐙</a>
+          <button id="mobile-menu" class="icon-btn mobile-only" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <div id="mobile-nav-overlay" class="overlay hidden" aria-hidden="true">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#wallpapers">Wallpapers</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#trending">Trending</a></li>
+          <li><a href="#latest">Latest</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Search overlay -->
+    <div id="search-overlay" class="overlay hidden" aria-hidden="true">
+      <div class="search-panel" role="dialog" aria-label="Search wallpapers">
+        <div class="search-top">
+          <input id="search-input" type="search" placeholder="Search wallpapers, categories, tags..." aria-label="Search wallpapers" autofocus>
+          <button id="search-close" class="icon-btn" aria-label="Close search">✕</button>
+        </div>
+        <div class="filters" role="region" aria-label="Filters">
+          <label><input type="checkbox" name="filter" value="anime"> Anime</label>
+          <label><input type="checkbox" name="filter" value="fantasy"> Fantasy</label>
+          <label><input type="checkbox" name="filter" value="4k"> 4K</label>
+          <label><input type="checkbox" name="filter" value="mobile"> Mobile</label>
+          <label><input type="checkbox" name="filter" value="desktop"> Desktop</label>
+          <label><input type="checkbox" name="filter" value="newest"> Newest</label>
+          <label><input type="checkbox" name="filter" value="trending"> Trending</label>
+        </div>
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay glass">
+          <div class="hero-content">
+            <h1 class="hero-title">MR. DRAGO</h1>
+            <p class="hero-sub">Discover Stunning AI Wallpapers</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#wallpapers">Explore Wallpapers</a>
+              <a class="btn btn-ghost" href="#collections">Latest Collection</a>
+            </div>
+          </div>
+        </div>
+
+        <picture class="hero-media" aria-hidden="false">
+          <!-- Replace the src with your uploaded dragon artwork path: assets/images/dragon-hero.jpg -->
+          <source srcset="assets/images/dragon-hero-1600.jpg 1600w, assets/images/dragon-hero-1200.jpg 1200w, assets/images/dragon-hero-800.jpg 800w" sizes="(min-width:1200px) 1200px, 100vw" media="(min-width:600px)">
+          <img src="assets/images/dragon-hero-800.jpg" alt="MR. DRAGO dragon artwork" loading="eager" class="hero-img">
+        </picture>
+
+        <div class="hero-effects">
+          <div class="embers"></div>
+          <div class="smoke-layer"></div>
+        </div>
+      </section>
+
+      <!-- Trending Wallpapers -->
+      <section id="wallpapers" class="section container">
+        <div class="section-header">
+          <h2>Trending Wallpapers</h2>
+          <p class="muted">Hand-picked, high-resolution AI wallpapers trending now.</p>
+        </div>
+
+        <div id="masonry" class="masonry">
+          <!-- Example card: replace image src with real assets -->
+          <article class="card" data-title="Crimson Dragon" data-category="Dragons" data-resolution="3840×2160" data-tags="dragon, fantasy, 4k" tabindex="0">
+            <a class="card-link" href="wallpaper.html">
+              <img data-src="assets/images/thumb1.jpg" alt="Crimson Dragon" class="card-img lazy">
+            </a>
+            <div class="card-meta">
+              <div class="meta-left">
+                <h3 class="card-title">Crimson Dragon</h3>
+                <div class="card-sub">Dragons • 3840×2160</div>
+              </div>
+              <div class="meta-actions">
+                <button class="btn-icon like-btn" aria-pressed="false" title="Like">♡</button>
+                <button class="btn-icon share-btn" title="Share">⤴</button>
+                <a class="btn-icon download-btn" href="assets/images/thumb1-full.jpg" download title="Download">⬇</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-title="Neo-Tokyo Rider" data-category="Cyberpunk" data-resolution="2560×1440" data-tags="cyberpunk, neon, 1440">
+            <a class="card-link" href="wallpaper.html">
+              <img data-src="assets/images/thumb2.jpg" alt="Neo-Tokyo Rider" class="card-img lazy">
+            </a>
+            <div class="card-meta">
+              <div class="meta-left">
+                <h3 class="card-title">Neo-Tokyo Rider</h3>
+                <div class="card-sub">Cyberpunk • 2560×1440</div>
+              </div>
+              <div class="meta-actions">
+                <button class="btn-icon like-btn" aria-pressed="false" title="Like">♡</button>
+                <button class="btn-icon share-btn" title="Share">⤴</button>
+                <a class="btn-icon download-btn" href="assets/images/thumb2-full.jpg" download title="Download">⬇</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-title="Anime Dawn" data-category="Anime" data-resolution="1080×1920" data-tags="anime, mobile, 1080">
+            <a class="card-link" href="wallpaper.html">
+              <img data-src="assets/images/thumb3.jpg" alt="Anime Dawn" class="card-img lazy">
+            </a>
+            <div class="card-meta">
+              <div class="meta-left">
+                <h3 class="card-title">Anime Dawn</h3>
+                <div class="card-sub">Anime • 1080×1920</div>
+              </div>
+              <div class="meta-actions">
+                <button class="btn-icon like-btn" aria-pressed="false" title="Like">♡</button>
+                <button class="btn-icon share-btn" title="Share">⤴</button>
+                <a class="btn-icon download-btn" href="assets/images/thumb3-full.jpg" download title="Download">⬇</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Add more cards as needed; cards are responsive in masonry layout -->
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section id="categories" class="section container">
+        <div class="section-header">
+          <h2>Categories</h2>
+          <p class="muted">Explore by genre & style.</p>
+        </div>
+
+        <div class="grid categories-grid">
+          <!-- Each category card -->
+          <a class="category glass-card" href="#" data-category="Anime">
+            <div class="cat-title">Anime</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Naruto">
+            <div class="cat-title">Naruto</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="One Piece">
+            <div class="cat-title">One Piece</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Bleach">
+            <div class="cat-title">Bleach</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Solo Leveling">
+            <div class="cat-title">Solo Leveling</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Jujutsu Kaisen">
+            <div class="cat-title">Jujutsu Kaisen</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Dragon Ball">
+            <div class="cat-title">Dragon Ball</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="My Hero Academia">
+            <div class="cat-title">My Hero Academia</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Chainsaw Man">
+            <div class="cat-title">Chainsaw Man</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Cyberpunk">
+            <div class="cat-title">Cyberpunk</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Fantasy">
+            <div class="cat-title">Fantasy</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="Dragons">
+            <div class="cat-title">Dragons</div>
+          </a>
+          <a class="category glass-card" href="#" data-category="AI Original Art">
+            <div class="cat-title">AI Original Art</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Featured Collection -->
+      <section id="collections" class="section container">
+        <div class="section-header">
+          <h2>Featured Collections</h2>
+          <p class="muted">Cinematic collections curated by MR. DRAGO.</p>
+        </div>
+
+        <div class="collections">
+          <article class="collection-card">
+            <img src="assets/images/collection-dark-dragons.jpg" alt="Dark Dragons" loading="lazy">
+            <div class="collection-info">
+              <h3>Dark Dragons</h3>
+              <p>Epic dragon artworks cast in shadow and ember.</p>
+            </div>
+          </article>
+
+          <article class="collection-card">
+            <img src="assets/images/collection-cyber-warriors.jpg" alt="Cyber Warriors" loading="lazy">
+            <div class="collection-info">
+              <h3>Cyber Warriors</h3>
+              <p>Blade-runner vibes and neon futures.</p>
+            </div>
+          </article>
+
+          <article class="collection-card">
+            <img src="assets/images/collection-anime-gods.jpg" alt="Anime Gods" loading="lazy">
+            <div class="collection-info">
+              <h3>Anime Gods</h3>
+              <p>Legendary characters and anime divine moments.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="contact" class="site-footer">
+        <div class="footer-inner container">
+          <div class="footer-left">
+            <div class="footer-brand">
+              <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" stroke="#C0C0C0" stroke-width="0.8"/><path d="M6 15c3-6 9-6 12-9" stroke="#E60023" stroke-width="1.2" stroke-linecap="round"/></svg>
+              <span>MR. DRAGO</span>
+            </div>
+            <p class="muted">Premium AI wallpapers — cinematic, luxurious, and futuristic.</p>
+          </div>
+
+          <div class="footer-links">
+            <div>
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#wallpapers">Wallpapers</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Follow</h4>
+              <ul class="social">
+                <li><a href="#" aria-label="Pinterest">Pinterest</a></li>
+                <li><a href="#" aria-label="GitHub">GitHub</a></li>
+                <li><a href="#" aria-label="Instagram">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container">
+            <small>© <span id="year"></span> MR. DRAGO. All rights reserved.</small>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script defer src="js/main.js"></script>
+</body>
+</html>
